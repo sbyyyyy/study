@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+table, tr, td, th {
+	text-align: center;
+	height: 40px;
+	border: 1px solid black;
+	border-collapse: collapse;
+	height: 40px;
+}
+
+th {
+	width: 200px;
+}
+
+td {
+	width: 400px;
+}
+
+form {
+	font-size: 20px;
+}
+
+button {
+	border: none;
+	background-color: aqua;
+	display: block;
+	width: 20px;
+	height: 20px;
+}
+
+textarea {
+	width: 400px;
+	height: 400px;
+	resize: none;
+}
+</style>
+</head>
+<body>
+
+	<p>
+		전송되는 입력값들을 파라미터라고 한다<br> 파라미터가 노출되는 형태 = method:get<br> 노출되지
+		않는 형태 = method:post
+	</p>
+
+	<form>
+		<input class="check" type="checkbox" name="checked"	value='selectall'>
+		<input class="check" type="checkbox" name="checked">
+		<input class="check" type="checkbox" name="checked">
+		<input class="check" type="checkbox" name="checked">
+		<input class="check" type="checkbox" name="checked">
+	</form>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<form>
+		<table>
+			<tr>
+				<th>아이디</th>
+				<td><input type="email" name='id'></td>
+			</tr>
+			<tr>
+				<th>비밀번호</th>
+				<td><input type="password" name='password'></td>
+			</tr>
+			<tr>
+				<th>비밀번호확인</th>
+				<td><input type="password" name='verified_password'></td>
+			</tr>
+			<tr>
+				<th>이름</th>
+				<td><input type="text" name='name'></td>
+			</tr>
+			<tr>
+				<th>성별</th>
+				<td><input type="radio" name='gender'>남<input
+					type="radio" name='gender'
+				>여</td>
+			</tr>
+			<tr>
+				<th>전화번호</th>
+				<td><select>
+						<option>02</option>
+						<option>062</option>
+				</select><input type="tel" name='phone'><input type="tel"
+					name='phone'
+				></td>
+			</tr>
+			<tr>
+				<th>SNS수신여부</th>
+				<td><input type="checkbox" name='sns'>수신함</td>
+			</tr>
+			<tr>
+				<th>이메일</th>
+				<td><input type="email" name='email'>@<select>
+						<option>직접입력</option>
+						<option>naver.com</option>
+						<option>gmail.com</option>
+				</select></td>
+			</tr>
+			<tr>
+				<th>사진등록</th>
+				<td><input type="file" name='photo'></td>
+			</tr>
+			<tr>
+				<td colspan='2'><input type="submit" value='회원가입'></td>
+			</tr>
+		</table>
+	</form>
+	<script src='app.js'></script>
+</body>
+</html>
