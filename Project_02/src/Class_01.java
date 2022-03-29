@@ -1,15 +1,14 @@
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Calendar;
-import java.util.Collections;
-import java.util.Iterator;
+import java.util.*;
 
 public class Class_01 {
 	public static void main(String[] args) {
 		Dog dog = new Dog(5.5f, 18f);
-		Lazy l = new Lazy();
+		Lazy l = new Lazy(3, 3);
 		Calendar cal = Calendar.getInstance();
-		System.out.println(cal.get(Calendar.HOUR));
+		
+		System.out.println(cal.get(Calendar.DATE));
+		
+		
 		
 		ArrayList<Integer> list = new ArrayList<>();
 		list.add(1);
@@ -21,7 +20,7 @@ public class Class_01 {
 		list.add(4);
 		Collections.sort(list);
 		Iterator<Integer> it = list.iterator();
-		
+
 		while(it.hasNext()) {
 			System.out.println(it.next());
 		}
@@ -38,10 +37,18 @@ public class Class_01 {
 	}
 }
 		
-class Lazy implements Runnable {
+class Lazy extends Dog implements Runnable {
+	float weight;
+	float height;
+	
+	Lazy(float weight, float height){
+		super(weight, height);
+		this.weight = weight;
+		this.height = height;
+	}
 	@Override
 	public void run() {
-		Dog dog = new Dog(621f, 32f);
+		Dog dog = new Dog(weight, height);
 		try {
 			Thread.sleep(3000);
 			dog.move("hahaha");
@@ -49,7 +56,6 @@ class Lazy implements Runnable {
 			e.printStackTrace();
 		}
 	}
-
 }
 
 class Dog {

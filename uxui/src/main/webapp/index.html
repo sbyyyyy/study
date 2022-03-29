@@ -1,23 +1,70 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="EUC-KR">
-<title>MyHTML</title>
-<link rel="stylesheet" href="css/style.css">
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+.header{
+background-color:red;
+}
+.container {
+}
+
+.content {
+	width: 500px;
+	height: 250px;
+	margin: 10px;
+	padding: 20px;
+	border: 1px solid;
+	float: left;
+}
+.content p{
+line-height:10px;
+}
+footer {
+background-color:yellow;
+clear:left;
+}
+.test{
+font-size:40px;
+}
+.test span{
+font-size:2em;
+}
+</style>
 </head>
-
 <body>
-<div class = "a">123</div>
-<div class = "b">123</div>
-
-<ul>
-<li>로그인</li>
-<li>회원가입</li>
-<li>장바구니</li>
-<li>주문조회</li>
-</ul>
-
-<button class="btn">홈으로</button>
-
+	<h1 class = "header">HEADER</h1>
+	<div class="container">
+		<div class="content">
+			<h1>content</h1>
+			<p>asdfsadfsadfsadfsdf</p>
+		</div>
+		<div class="content">
+			<h1>content</h1>
+			<p>asdfsadfsadfsadfsdf</p>
+		</div>
+		<div class="content">
+			<h1>content</h1>
+			<p>asdfsadfsadfsadfsdf</p>
+		</div>
+		<div class="content">
+			<h1>content</h1>
+			<p>asdfsadfsadfsadfsdf<br>
+			asdfsadfsadfsadfsdf<br>
+			asdfsadfsadfsadfsdf<br>
+			asdfsadfsadfsadfsdf<br>
+			asdfsadfsadfsadfsdf<br>
+			asdfsadfsadfsadfsdf<br></p>
+		</div>
+	</div>
+	<footer>
+		<h1>FOOTER</h1>
+	</footer>
+	
+	<h1 class="test">
+	Hello<br>
+	<span>Hello</span>
+	</h1>
 </body>
 </html>
