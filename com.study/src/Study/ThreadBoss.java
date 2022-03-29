@@ -1,7 +1,7 @@
 package Study;
 
 public class ThreadBoss {
-	public static void main(String[] args) {
+	public static void main(String[] args) throws Exception {
 		Me me = new Me();
 		Boss boss1 = new Boss(me, "Design");
 		Boss boss2 = new Boss(me, "Programming");
@@ -11,10 +11,15 @@ public class ThreadBoss {
 		Thread t2 = new Thread(boss2);
 		Thread t3 = new Thread(boss3);
 		
-		
 		t1.start();
+		t1.join();
+		
 		t2.start();
+		t2.join();
+		
 		t3.start();
+		t3.join();
+		
 	}
 }
 
@@ -45,13 +50,13 @@ class Boss implements Runnable {
 		synchronized (worker) {
 			try {
 				System.out.println("Do " + task + "!!");
-				Thread.sleep(1000);
+				Thread.sleep(100);
 				Me.answer();
-				Thread.sleep(1000);
+				Thread.sleep(100);
 				Me.work();
-				Thread.sleep(1000);
+				Thread.sleep(100);
 				Me.finish();
-				Thread.sleep(1000);
+				Thread.sleep(100);
 			} catch (Exception e) {
 				System.out.println(e);
 			}
